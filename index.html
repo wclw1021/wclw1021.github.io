@@ -94,81 +94,177 @@
 			<div id="main">
                 <!-- Tabs for navigation -->
                 <div class="tabs" style="margin-top: -100px;">
-                    <button class="section-button active" onclick="toggleSection('one', this)">Home</button>
-                    <button class="section-button" onclick="toggleSection('two', this)">Papers</button>
-                    <button class="section-button" onclick="toggleSection('three', this)">Projects</button>
-                    <button class="section-button" onclick="toggleSection('four', this)">Resources</button>
-                    <button class="section-button" onclick="toggleSection('five', this)">Contact</button>
+<button class="section-button active" onclick="updateUrl('one', this);">Home</button>
+<button class="section-button" onclick="updateUrl('two', this);">Papers</button>
+<button class="section-button" onclick="updateUrl('three', this);">Projects</button>
+<button class="section-button" onclick="updateUrl('four', this);">Resources</button>
+<button class="section-button" onclick="updateUrl('five', this);">Contact</button>
                 </div>
 
-				<!-- One -->
-				<section id="one" class="section-content active">
-					<header class="major">
-						<h2>Something about myself</h2>
-					</header>
-					<p>My name is Caoliwen Wang, a junior student in USTC, majoring in Computational Mathematics, especially Computer Graphics, in Mathematics Scientific Institute.</p>
-				</section>
+<section id="one" class="section-content active">
+    <header class="major">
+        <!-- Adding a style for the header -->
+        <h2 style="font-size: 36px; font-family: 'Arial', sans-serif; color: #4A90E2; text-align: center;">
+            Welcome to my homepage!
+        </h2>
+    </header>
+    <!-- Translated text with additional formatting -->
+    <p style="font-size: 18px; font-family: 'Georgia', serif; color: #333; line-height: 1.6; text-align: justify; word-spacing: 0.15em;">
+        Welcome to you, and also welcome to me! I am currently a senior student at the University of Science and Technology of China (USTC) in the School of Mathematical Sciences, working at the <a href="http://gcl.ustc.edu.cn/" target="_blank" style="color: #0066cc; text-decoration: none;">USTC-GCL Lab</a>. I major in Computational Mathematics, specializing in Computer Graphics. During my current studies, I have developed a strong interest in Geometry Processing, exploring both traditional pipelines and learning-based methods.
+    </p>
+</section>
+
+
+
+
 
 				<!-- Two -->
 				<section id="two" class="section-content">
-					<h2>Work Experiences</h2>
-					<div class="row">
-						<article class="col-12 work-item">
-							<h3>Shadow Art</h3>
-							<p>28 Feb 2024 -- Current</p>
-						</article>
-						<article class="col-12 work-item">
-							<h3>USTC-GPT Program</h3>
-							<p>1 May 2023 -- 31 Nov 2023</p>
-							<p>It created &quot;LLM + USTC&quot;, tailoring the LLM to function as a campus guide for USTC.</p>
-							<p><a href="https://github.com/licy02/ustc">You can see it here.</a></p>
-						</article>
+					<div class="row">                
+                        <article class="col-12 work-item">
+    <div style="display: flex; align-items: flex-start;">
+        <div style="flex: 1; text-align: justify; hyphens: auto;">
+            <h3>Neural Shadow Art</h3>
+            <p>Caoliwen Wang, Bailin Deng, Juyong Zhang</p>
+            
+ <p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
+    <a href="Neural_Shadow_Art/index.html" target="_blank" style="text-decoration: none; color: #0066cc;">Project Page (updating)</a>
+</p>
+ <p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
+    Paper
+</p>
+ <p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
+     Code (coming soon)
+</p>
+        </div>
+        <div style="flex: 0 0 auto; margin-left: 20px;">
+            <video width="209.75" height="151" autoplay loop muted controls>
+                <source src="files/sti=1000,exp=7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</article>
 					</div>
 				</section>
 
 				<!-- Three -->
 				<section id="three" class="section-content">
-					<h2>Projects</h2>
 					<div class="row">
 						<article class="col-12 work-item">
 							<div style="display: flex; align-items: flex-start;">
 								<div style="flex: 1; text-align: justify; hyphens: auto;">
-									<h3>SFM-MVS Reconstruction Method</h3>
-									<p>15 May 2024 -- 2 June 2024</p>
-									<p>This project primarily implements the classic Structure-from-Motion and Multi-View Stereo (SFM-MVS) approach for 3D reconstruction.</p>
-									<p><a href="https://github.com/wclw1021/SFM-MVS-Reconstruction">You can see it here.</a></p>
-								</div>
+    <h3>SFM-MVS Reconstruction Method</h3>
+    <p>This project primarily implements the classic Structure-from-Motion and Multi-View Stereo (SFM-MVS) approach for 3D reconstruction. It is based on modifications made to the SFMedu: Structure From Motion for Education Purpose, Version 2 @ 2014 framework, which was originally written by Jianxiong Xiao and is available under the MIT License. The project provides a comprehensive walkthrough of the entire method, incorporating improvements to enhance the original approach. Additionally, it integrates other relevant articles related to 3D reconstruction and compares various methods to evaluate their effectiveness and performance.</p>
+
+<p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
+    <a href="files/Research_on_the_Problem_of_3D_Reconstruction_Based_on_Multi_view_Images.pdf" target="_blank" style="text-decoration: none; color: #0066cc;">Report</a>
+</p>
+<p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-top: 20px;">
+    <a href="https://github.com/wclw1021/SFM-MVS-Reconstruction" target="_blank" style="text-decoration: none; color: #0066cc;">Code</a>
+</p>
+
+
+
+</div>
+
 								<div style="flex: 0 0 auto; margin-left: 20px;">
 									<img src="files/SFMMVS.png" width="209.75" height="151" longdesc="files/SFMMVS.png" style="display: block;">
 								</div>
 							</div>
 						</article>
-						<article class="col-12 work-item">
-							<h3>USTC Genshin Impact</h3>
-							<p>27 April 2024 -- 17 May 2024</p>
-							<p>This project accomplished the development of an open-world game inspired by Genshin Impact at USTC.</p>
-							<p><a href="http://staff.ustc.edu.cn/~lgliu/Courses/ComputerGraphics_2024_spring-summer/Projects/index4.html">You can see it here.</a></p>
+<article class="col-12 work-item">
+							<div style="display: flex; align-items: flex-start;">
+								<div style="flex: 1; text-align: justify; hyphens: auto;">
+    <h3>USTC Genshin Impact</h3>
+    <p>This project accomplished the development of an open-world game inspired by <strong>Genshin Impact</strong> at USTC. It features an aesthetically pleasing entry scene and a main scene created using aerial data of the USTC campus. Additionally, it includes a card game modeled after <strong>Slay the Spire</strong>. Players can explore the USTC world with a day-night cycle, reminisce about their journey in computational mathematics, and seek the truth about "Computer Graphics." The primary tool used is Unity. </p>
+
+<p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
+    <a href="http://staff.ustc.edu.cn/~lgliu/Courses/ComputerGraphics_2024_spring-summer/Projects/index4.html" target="_blank" style="text-decoration: none; color: #0066cc;">Project  Page</a>
+</p>
+</div>
+
+								        <div style="flex: 0 0 auto; margin-left: 20px; display: flex; flex-direction: column; align-items: flex-start;">
+            <img src="files/Impact1.png" width="234.8" height="148" longdesc="files/Impact1.png" style="margin-bottom: 20px; display: block;">
+            <img src="files/Impact2.png" width="234.8" height="148" longdesc="files/Impact2.png" style="display: block;">
+        </div>
+							</div>
+						</article>
+                 </article>
+<article class="col-12 work-item">
+							<div style="display: flex; align-items: flex-start;">
+								<div style="flex: 1; text-align: justify; hyphens: auto;">
+    <h3>USTC GPT</h3>
+    <p>This project stems from the rapid development of large language models, which has made knowledge acquisition
+particularly convenient. However, in a relatively small academic environment like the University of Science and
+Technology of China, ChatGPT struggles to provide accurate feedback on specific information related to the
+university. Therefore, we aim to develop USTC-GPT, a tool designed to assist faculty and students with inquiries
+related to campus matters. </p>
+
+<p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
+    <a href="https://github.com/licy02/ustc" target="_blank" style="text-decoration: none; color: #0066cc;">Project  Page</a>
+</p>
+
+						</article>
+                  						</article>
+                 </article>
+<article class="col-12 work-item">
+							<div style="display: flex; align-items: flex-start;">
+								<div style="flex: 1; text-align: justify; hyphens: auto;">
+    <h3>Investigation of 3D Human Modeling</h3>
+    <p>This project was completed as part of the Advanced Computer Graphics course. In this project, I reviewed a large number of articles related to 3D human modeling, including classic works such as SCAPE, SMPL, STAR, PIFu, and fusion methods based on RGB-D. Ultimately, I completed a reading report.</p>
+
+<p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
+    <a href="files/3D_Human_Modeling_Reading_Report.pdf" target="_blank" style="text-decoration: none; color: #0066cc;">Report</a>
+</p>
+
 						</article>
 					</div>
 				</section>
 
 				<!-- Four -->
 				<section id="four" class="section-content">
-					<h2>Some resources</h2>
 					<div class="row">
 						<article class="col-12 work-item">
 							<h3>Teaching Assistant</h3>
 							<p>1. I'm a teaching assistant of "Introduction to differential equations" course in 2023 fall semester.</p>
+                            <p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px;">
+    <a href="2023wffc.html" target="_blank" style="text-decoration: none; color: #0066cc;">Course Homepage</a>
+</p>
 							<p>2. I'm a teaching assistant of "Mathematical Analysis A2" course in 2024 spring semester.</p>
-							<p>3. I'm a teaching assistant of "Introduction to differential equations" course in 2024 fall semester.</p>
+                                                        <p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; ">
+    <a href="2024A2.html" target="_blank" style="text-decoration: none; color: #0066cc;">Course Homepage</a>
+</p>
+							<p>3. I'm a teaching assistant of "Numerical Algebra" course in 2024 fall semester.</p>
 						</article>
+                        
+                        <article class="col-12 work-item">
+    <div style="display: flex; align-items: flex-start;">
+        <div style="flex: 1; text-align: justify; hyphens: auto;">
+            <h3>Learning for Computer Graphics</h3>
+            <p>The purpose of this resource is to consolidate the important knowledge I have learned related to computer graphics. It has now been updated with the content from the computer graphics and mathematical modeling courses at USTC. The code for the computer graphics still requires maintenance and further corrections, and I'm now working at changing it into a geometry processing library.</p>
+            <p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
+    <a href="files/Learning_For_CG.pdf" target="_blank" style="text-decoration: none; color: #0066cc;">Report</a>
+</p>
+<p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-top: 20px;">
+    <a href="https://github.com/wclw1021/CG2024" target="_blank" style="text-decoration: none; color: #0066cc;">Code</a>
+</p>
+        </div>
+        <div style="flex: 0 0 auto; margin-left: 20px;">
+            <video width="209.75" height="151" autoplay loop muted controls>
+                <source src="files/sti=1000,exp=7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</article>
 					</div>
 				</section>
 
 				<!-- Five -->
 				<section id="five" class="section-content">
 					<h2>Get In Touch</h2>
-					<p>Here are the ways to get in touch with me:</p>
+					<p>I would be very grateful for the opportunity to engage in discussions with fellow students who are working in the fields of mathematics and computer graphics. Here are the ways to get in touch with me:</p>
 					<div class="row">
 						<div class="col-12 work-item">
 							<ul class="labeled-icons">
@@ -198,30 +294,52 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<script>
+    // 更新 URL 并保持页面不刷新
+    function updateUrl(id, button) {
+        // 获取当前的 URL
+        const currentUrl = window.location.href;
+		const buttonName = button.textContent || button.innerText;
+		
+        // 构建新的 URL 后缀
+        const newUrl = currentUrl.split('#')[0] + '#' + buttonName;
+		
 
-            <!-- JavaScript to toggle sections -->
-            <script>
-                function toggleSection(id, button) {
-                    var sections = document.querySelectorAll('.section-content');
-                    sections.forEach(function (section) {
-                        section.classList.remove('active');
-                    });
+        // 使用 pushState 添加新的历史记录项，保持页面不刷新
+        history.pushState(null, null, newUrl);
 
-                    var buttons = document.querySelectorAll('.section-button');
-                    buttons.forEach(function (btn) {
-                        btn.classList.remove('active');
-                    });
+        // 切换到对应的内容
+        toggleSection(id, button);
+    }
 
-                    document.getElementById(id).classList.add('active');
-                    button.classList.add('active');
-                }
-            </script>
+    // 页面加载时根据 URL 锚点显示对应内容
+    window.addEventListener("load", function() {
+        var hash = window.location.hash.substring(1); // 获取 URL 中的锚点
+        if (hash) {
+            toggleSection(hash, document.querySelector('button[onclick="updateUrl(\'' + hash + '\', this);"]'));
+        }
+    });
+
+    // 切换内容显示
+    function toggleSection(id, button) {
+        // 隐藏所有内容
+        document.querySelectorAll('.section-content').forEach(function(section) {
+            section.classList.remove('active');
+        });
+
+        // 激活对应的内容
+        document.getElementById(id).classList.add('active');
+
+        // 去掉所有按钮的激活状态
+        document.querySelectorAll('.section-button').forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+
+        // 激活当前点击的按钮
+        button.classList.add('active');
+    }
+</script>
+
 
 	</body>
 </html>
