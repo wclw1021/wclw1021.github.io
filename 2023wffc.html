@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>微分方程课程主页</title>
+    <link rel="stylesheet" type="text/css" href="realmodel.css" media="all">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #header {
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        #footer {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        <h1><strong>微分方程引论（赵老师班）</strong></h1>
+        <p><font size="5" ,="" face="华文行楷">数学科学学院2023-2024学年秋季学期</font></p>
+    </div>
+
+    <div id="content">
+        <h2><strong>重要说明</strong></h2>
+        <table>
+            <tr>
+                <td><div align="left">
+                  <p>1.课程群群号为125289527，重要的通知会同时在课程群与本页面更新。</p>
+                  <p>2.课程教材:</p>
+                  <p>ode部分使用柳彬老师的常微分方程，pde部分使用周蜀林老师的偏微分方程。</p>
+                  <p>3.课程内容:</p><p>相比于去年讲义<span style="color: red; font-weight: bold;">不会有过多变化</span>，可能会将原先在pde分离变量法中讲的Sturm-Liouvile相关内容放置到ode部分，可以参考群内已有的文件，LaTeX源代码为：<a href="https://latex.ustc.edu.cn/read/crtjjgfmkvkp">https://latex.ustc.edu.cn/read/crtjjgfmkvkp</a>，对其中的建议欢迎联系我们。</p>
+                  <p>4.习题课:</p>
+                  <p>无特殊情况，定于双周周天晚上的19:30。</p>
+                  <p>5.作业:</p>
+                  <p>根据老师通知，每两周交一次或者每一周交一次，在需要交作业那一周的周一或者周四按照分组放在5302教室后即可，分组请见课程群聊。接受在该周未交且在下一次交作业时补交的作业，但是会扣除一定分数，<span style="color: red; font-weight: bold;">不接受在不应该交作业的周的补交，不接受期末泄洪式补交。</span></p>
+                  <p>接受电子版作业，电子版作业请<span style="color: red; font-weight: bold;">在需要交作业那一周的周一至周四晚上12:00</span>提交至助教的邮箱，<span style="color: red; font-weight: bold;">请勿提交至聊天框</span>，助教的邮箱为:</p>
+                  <p>第一组：王曹励文 wclw1021@mail.ustc.edu.cn<br>
+                  第二组：王鼎涵 wangdinghan@mail.ustc.edu.cn<br>
+                  第三组：刘翛然  
+                  liuxiaoran@mail.ustc.edu.cn<span style="color: red; font-weight: bold;">                  </span></p>
+                  <p><span style="color: red; font-weight: bold;">为了进一步鼓励大家做好pde部分的作业，我们修改作业规则如下。<br>
+                    1、每次作业满分为11分，每两个会导致解题失败的错误扣0.5分，小错误不扣分；<br>
+                    2、迟交的作业额外扣1分，未在补交期限内补交的不再接受提交；<br>
+                  3、学期作业总分不超过10×作业次数。</span></p>
+                  
+                  <p>6.点名:</p>
+                  <p>老师会在重要的课程前一节课通知下一节课点名，部分习题课也会点名，点名只用于挂科边缘捞至及格的情况，对其余同学的成绩<span style="color: red; font-weight: bold;">没有任何影响</span>。</p>
+                  <p>7.录课:</p>
+                  <p>本课程正课<span style="color: red; font-weight: bold;">不会录课</span>，强烈建议大家按时上课，习题课会尽量录制，实在没办法来的同学请参考：<a href="http://home.ustc.edu.cn/~tysun/">http://home.ustc.edu.cn/~tysun/</a>，存在细微差别。</p>
+                  <p>8.分组：</p>
+                  <p>已经发布在课程群，请查看。 </p>
+                </div></td>
+            </tr>
+        </table>
+
+        <h2><strong>课程安排</strong></h2>
+        <table>
+            <tr>
+                <th>上课时间</th>
+                <th>上课教室</th>
+                <th>授课时间</th>
+            </tr>
+            <tr>
+                <td>周一（3,4）周四（6,7）</td>
+                <td>5302</td>
+                <td>80学时</td>
+            </tr>
+        </table>
+		<p>&nbsp;</p>
+        <h2><strong>考试安排</strong></h2>
+        <p><span style="color: red; font-weight: bold;">期中考试定于11.26（周日）晚19:00-21:00</span></p>
+        <p><span style="color: red; font-weight: bold;">期末考试定于1.18（周四）早8:30-10:30</span></p>
+        <p><span style="color: red; font-weight: bold;"><a href="wffc.files/exercise_class.pdf">习题课讲义整合版</a></span></p>
+        <p><span style="color: red; font-weight: bold;"><a href="wffc.files/23mid.pdf">期中考试题</a></span> 考试情况已经发布，请查收邮箱</p>
+        <p>&nbsp;</p>
+        <h2><strong>习题课安排</strong></h2>
+        <table>
+            <tr>
+                <th>习题课时间</th>
+                <th>地点</th>
+            </tr>
+            <tr>
+                <td>双周周日19:30</td>
+                <td>5302</td>
+            </tr>
+        </table>
+
+        <table>
+          <tr>
+            <th width="21%">时间</th>
+            <th width="61%">内容</th>
+            <th width="18%">讲义</th>
+          </tr>
+          <tr>
+            <td>9.17</td>
+            <td>一阶隐式方程、Riccati方程、解的存在唯一性的证明</td>
+            <td><a href="wffc.files/9.17.pdf">9.17</a></td>
+          </tr>
+          <tr>
+            <td>9.24</td>
+            <td>前两周作业与第三周作业T3、补充习题</td>
+            <td><a href="wffc.files/9.24.pdf">9.24</a></td>
+          </tr>
+          <tr>
+            <td>10.15</td>
+            <td>第三周、第四周作业、补充习题、Kneser定理</td>
+            <td><a href="wffc.files/10.15.pdf">10.15</a></td>
+          </tr>
+          <tr>
+            <td>10.22</td>
+            <td>幂级数解法的基本理论、第五周、第六周作业、补充习题、扰动定理</td>
+            <td><a href="wffc.files/11.13.pdf">10.22</a></td>
+          </tr>
+          <tr>
+            <td>11.09</td>
+            <td>第七周、第八周作业、补充习题、平面线性系统的动力学分类</td>
+            <td><a href="wffc.files/11.09.pdf">11.09</a></td>
+          </tr>
+          <tr>
+            <td>11.13</td>
+            <td>广义幂级数解法</td>
+            <td><a href="wffc.files/11.13.pdf">11.13</a></td>
+          </tr>
+          <tr>
+            <td>11.19</td>
+            <td>第九周、第十周作业、期中复习</td>
+            <td><a href="wffc.files/11.19.pdf">11.19</a></td>
+          </tr>
+          <tr>
+            <td>12.10</td>
+            <td>第十二周作业、子流形上的积分</td>
+            <td><a href="wffc.files/12.10.pdf">12.10</a></td>
+          </tr>
+          <tr>
+            <td>12.24</td>
+            <td>部分作业、Fourier变换</td>
+            <td><a href="wffc.files/12.24.pdf">12.24</a></td>
+          </tr>
+          <tr>
+            <td>1.4</td>
+            <td>部分作业、补充习题</td>
+            <td><a href="wffc.files/1.4.pdf">1.4</a></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <h2><strong>课程教材</strong></h2>
+        <table>
+            <tr>
+                <th>名称</th>
+                <th>链接</th>
+            </tr>
+            <tr>
+                <td>常微分方程，柳彬编著</td>
+                <td><a href="wffc.files/ode.lb.pdf">pdf</a></td>
+            </tr>
+            <tr>
+                <td>偏微分方程，周蜀林编著</td>
+                <td><a href="wffc.files/pde.zsl.pdf">pdf</a></td>
+            </tr>
+            <tr>
+                <th>参考资料</th>
+                <th>链接</th>
+            </tr>
+            <tr>
+                <td>微分方程引论习题课讲义（2022秋宁老师班）</td>
+                <td><a href="wffc.files/2022fall.exercise-lecture.pdf">pdf</a></td>
+            </tr>
+            <tr>
+                <td>常微分方程教程，丁同仁、李承治编</td>
+                <td><a href="wffc.files/ode.dtr.pdf">pdf</a></td>
+            </tr>
+            <tr>
+                <td>GTM182.Ordinary.Differential.Equations</td>
+                <td><a href="wffc.files/GTM182.Ordinary.Differential.Equations,.Walter.W..(Springer.1998)(ISBN.0387984593)(T)(398s).pdf">pdf</a></td>
+            </tr>
+            <tr>
+                <td>Walter A. Strauss-Partial Differential Equations An Introduction</td>
+                <td><a href="wffc.files/Walter A. Strauss-Partial Differential Equations An Introduction.pdf">pdf</a></td>
+            </tr>
+            <tr>
+                <td>Partial Differential Equations（Evans）第二版</td>
+                <td><a href="wffc.files/Partial Differential Equations.Evans.pdf">pdf</a></td>
+            </tr>
+        </table>
+
+        <p><strong>更多资料可以到课程群文件《参考资料》一栏下载，但一般来说以上足够。</strong></p>
+
+        <h2><strong>课程内容与讲义</strong></h2>
+        <p style="color:red"><strong>强烈建议选修本课程的同学按时到教室上课！</strong></p>
+        <p><a href="wffc.files/2022fall.note.pdf">22秋微分方程引论课程笔记</a></p>
+        <p><a href="wffc.files/ode_note.pdf">22秋线性微分方程组、定性理论</a></p>
+      <p><a href="wffc.files/pde_note.pdf">22秋偏微分方程课程笔记</a></p>
+        <table>
+            <tr>
+                <th width="13%">周数</th>
+                <th width="87%">内容</th>
+            </tr>
+            <tr>
+                <td>第一周</td>
+                <td>基本概念、恰当方程、可分离变量的方程、一阶线性微分方程、特殊的方程一阶方程</td>
+            </tr>
+            <tr>
+              <td>第二周</td>
+              <td>Gronwall不等式、Picard存在唯一性定理（迭代证明与压缩映射证明）、Peano存在性定理、Osgood定理</td>
+            </tr>
+            <tr>
+                <td>第三周</td>
+                <td>解的延伸定理、比较定理</td>
+            </tr>
+            <tr>
+              <td>第四周</td>
+              <td>比较定理、高阶微分方程、解对初值和参数的连续依赖性与连续可微性、变分方程</td>
+            </tr>
+            <tr>
+              <td>第五周</td>
+              <td>线性微分方程组的一般理论</td>
+            </tr>
+            <tr>
+              <td>第六周</td>
+              <td>常系数线性微分方程组、高阶线性微分方程</td>
+            </tr>
+            <tr>
+              <td>第七周</td>
+              <td>高阶线性微分方程、定性理论基本概念</td>
+            </tr>
+            <tr>
+              <td>第八周</td>
+              <td>解的稳定性(线性近似方法与Lyapunov第二方法)</td>
+            </tr>
+            <tr>
+              <td>第九周</td>
+              <td>平面上的动力系统、相图、Nullcline方法、S-L边值问题</td>
+            </tr>
+            <tr>
+              <td>第十周</td>
+              <td>S-L边值问题、常微分方程内容总复习</td>
+            </tr>
+            <tr>
+              <td>第十一周</td>
+              <td>调和函数及其性质</td>
+            </tr>
+            <tr>
+              <td>第十二周</td>
+              <td>基本解与Green函数</td>
+            </tr>
+            <tr>
+              <td>第十三周</td>
+              <td>极值原理、最大模估计</td>
+            </tr>
+            <tr>
+              <td>第十四周</td>
+              <td>一阶偏微分方程，一维初值问题，一维半无界问题</td>
+            </tr>
+            <tr>
+              <td>第十五周</td>
+              <td>三维问题、二维问题、分离变量法</td>
+            </tr>
+            <tr>
+              <td>第十六周</td>
+              <td>能量估计、Fourier变换</td>
+            </tr>
+            <tr>
+                <td>第十七周</td>
+                <td>热方程的解、极值原理与最大模估计</td>
+            </tr><!-- 添加更多周数和内容，根据你的需求定制 -->
+        </table>
+
+        <h2><strong>课程作业</strong></h2>
+        <table>
+            <tr>
+                <th>周数</th>
+                <th>作业内容</th>
+                <th>解答</th>
+            </tr>
+            <tr>
+                <td>第一周</td>
+                <td><a href="wffc.files/homework0904.pdf">P27 2(2),3; </a>P32 2; P33 4,5</td>
+                <td><a href="wffc.files/9.24.pdf">9.24</a></td>
+            </tr>
+            <tr>
+              <td>第二周</td>
+              <td>P96 2; P96 3</td>
+              <td><a href="wffc.files/9.24.pdf">9.24</a></td>
+            </tr>
+            <tr>
+                <td>第三周</td>
+                <td>P110 2,3,4</td>
+                <td><p><a href="wffc.files/9.24.pdf">9.24</a><a href="wffc.files/10.15.pdf">10.15</a></p></td>
+            </tr>
+            <tr>
+              <td>第四周</td>
+              <td>P120 1; 第二比较定理的证明; P161 1; P162 4(1)</td>
+              <td><a href="wffc.files/10.15.pdf">10.15</a></td>
+            </tr>
+            <tr>
+              <td>第五周</td>
+              <td>P173 2,3,4</td>
+              <td><a href="wffc.files/10.22.pdf">10.22</a></td>
+            </tr>
+            <tr>
+              <td>第六周</td>
+              <td>P189 1(4) (8); P190 2(1),3(1)</td>
+              <td><a href="wffc.files/10.22.pdf">10.22</a></td>
+            </tr>
+            <tr>
+              <td>第七周</td>
+              <td>P210 1(4) (6),2(3); P211 5</td>
+              <td><a href="wffc.files/11.09.pdf">11.09</a></td>
+            </tr>
+            <tr>
+              <td>第八周</td>
+              <td>P331 6,8,4,5(1)</td>
+              <td><a href="wffc.files/11.09.pdf">11.09</a></td>
+            </tr>
+            <tr>
+              <td>第九周</td>
+              <td>P346 1(1)(3)</td>
+              <td><a href="wffc.files/11.19.pdf">11.19</a></td>
+            </tr>
+            <tr>
+              <td>第十周</td>
+              <td>P259 2,4</td>
+              <td><a href="wffc.files/11.19.pdf">11.19</a></td>
+            </tr>
+            <tr>
+              <td>第十一周</td>
+              <td>无</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>第十二周</td>
+              <td>第二章习题 6(去掉2) ,7,12,18</td>
+              <td><a href="wffc.files/12.10.pdf">12.10</a></td>
+            </tr>
+            <tr>
+              <td>第十三周</td>
+              <td>证明定理2.27，第二章习题21,25,28</td>
+              <td><a href="wffc.files/12.24.pdf">12.24</a></td>
+            </tr>
+            <tr>
+              <td>第十四周</td>
+              <td>第四章习题15</td>
+              <td><a href="wffc.files/12.24.pdf">12.24</a></td>
+            </tr>
+            <tr>
+              <td>第十五周</td>
+              <td><p>第四章习题24,27,39; P139 18(4); P213  40(2),41(3)  方程中a取成1</p></td>
+              <td><a href="wffc.files/12.24.pdf">12.24</a></td>
+            </tr>
+            <tr>
+              <td>第十六周</td>
+              <td>第四章 34,38; 第三章3(2),4(1)</td>
+              <td><a href="wffc.files/1.4.pdf">1.4</a></td>
+            </tr>
+            <tr>
+                <td>第十七周</td>
+                <td><p>第三章 25,26; P122 引理3.15与定理3.14</p></td>
+                <td><a href="wffc.files/1.4.pdf">1.4</a></td>
+            </tr><!-- 添加更多周数、作业内容和解答，根据你的需求定制 -->
+        </table>
+
+      <h2><strong>往年试题与解答</strong></h2>
+      <p>宁老师和赵老师的授课内容略有不同，因此宁老师班的试题仅供参考！几乎所有的往年题被以下文件和习题课讲义所覆盖！</p>
+        <table width="113%">
+            <tr>
+                <th width="13%">年份</th>
+                <th width="22%">期中试题</th>
+                <th width="22%">参考解答</th>
+                <th width="21%">期末试题</th>
+                <th width="22%">参考解答</th>
+            </tr>
+            <tr>
+              <td>2022</td>
+              <td><a href="wffc.files/22mid.zhao.ques.pdf">赵班</a>，宁班</td>
+              <td>赵班，<a href="wffc.files/22mid.ning.ans.pdf">宁班</a></td>
+              <td><a href="wffc.files/22final.zhao.ques.pdf">赵班</a>，宁班</td>
+              <td>赵班，宁班</td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td><a href="wffc.files/21mid.zhao.ques.pdf">赵班</a>，宁班</td>
+              <td><a href="wffc.files/21mid.zhao.ans.pdf">赵班</a>，宁班</td>
+              <td>赵班，宁班</td>
+              <td>赵班，宁班</td>
+            </tr>
+            <tr>
+              <td>2020</td>
+              <td><a href="wffc.files/20mid.zhao.ques.pdf">赵班</a>，宁班</td>
+              <td>赵班，宁班</td>
+              <td><a href="wffc.files/20final.zhao.ques&ans.pdf">赵班</a>，宁班</td>
+              <td><a href="wffc.files/20final.zhao.ques&ans.pdf">赵班</a>，宁班</td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td>赵班，<a href="wffc.files/19mid.ning.ques.pdf">宁班</a></td>
+              <td>赵班，<a href="wffc.files/19mid.ning.ans.pdf">宁班</a></td>
+              <td>赵班，<a href="wffc.files/19final.ning.ques&ans.pdf">宁班</a></td>
+              <td>赵班，<a href="wffc.files/19final.ning.ques&ans.pdf">宁班</a></td>
+            </tr>
+            <!-- 添加更多年份、试题和解答，根据你的需求定制 -->
+        </table>
+    </div>
+
+    <div id="footer">
+        <p>水平有限，任何有关此页面的建议，欢迎<a href="index.html">联系我</a></p>
+        <p>Last updated on Jan 22th, 2024</p>
+    </div>
+</div>
+</body>
+</html>
+
