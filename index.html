@@ -124,8 +124,11 @@
                         <article class="col-12 work-item">
     <div style="display: flex; align-items: flex-start;">
         <div style="flex: 1; text-align: justify; hyphens: auto;">
-            <h3>Neural Shadow Art</h3>
-            <p>Caoliwen Wang, Bailin Deng, Juyong Zhang</p>
+            <h3 style="color: black; font-family: 'Georgia' ">Neural Shadow Art</h3>
+<p style="color: black; font-family: 'Georgia' ">
+    <span style="font-weight: bolder;  ">Caoliwen Wang</span>, Bailin Deng, Juyong Zhang
+</p>
+
             
  <p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
     <a href="Neural_Shadow_Art/index.html" target="_blank" style="text-decoration: none; color: #0066cc;">Project Page (updating)</a>
@@ -135,7 +138,7 @@
 </p>
  <p style="display: inline-block; border: 2px solid #efefef; border-radius: 10px; padding: 10px; margin-right: 10px; margin-top: 20px;">
      Code (coming soon)
-</p>
+</p> <!-- 
         </div>
         <div style="flex: 0 0 auto; margin-left: 20px;">
             <video width="209.75" height="151" autoplay loop muted controls>
@@ -143,7 +146,7 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-    </div>
+    </div>-->
 </article>
 					</div>
 				</section>
@@ -295,49 +298,69 @@ related to campus matters. </p>
 
 		<!-- Scripts -->
 <script>
-    // 更新 URL 并保持页面不刷新
-    function updateUrl(id, button) {
-        // 获取当前的 URL
-        const currentUrl = window.location.href;
-		const buttonName = button.textContent || button.innerText;
-		
-        // 构建新的 URL 后缀
-        const newUrl = currentUrl.split('#')[0] + '#' + buttonName;
-		
+// 更新 URL 并保持页面不刷新
+// 更新 URL 并保持页面不刷新
+function updateUrl(id, button) {
+    const currentUrl = window.location.href;
+    const buttonName = button.textContent || button.innerText;
 
-        // 使用 pushState 添加新的历史记录项，保持页面不刷新
-        history.pushState(null, null, newUrl);
+    // 构建新的 URL 后缀
+    const newUrl = currentUrl.split('#')[0] + '#' + buttonName;
 
-        // 切换到对应的内容
-        toggleSection(id, button);
-    }
+    // 使用 pushState 添加新的历史记录项，保持页面不刷新
+    history.pushState(null, null, newUrl);
 
-    // 页面加载时根据 URL 锚点显示对应内容
-    window.addEventListener("load", function() {
-        var hash = window.location.hash.substring(1); // 获取 URL 中的锚点
-        if (hash) {
-            toggleSection(hash, document.querySelector('button[onclick="updateUrl(\'' + hash + '\', this);"]'));
+    // 切换到对应的内容
+    toggleSection(id, button);
+}
+
+// 页面加载时根据 URL 锚点显示对应内容
+window.addEventListener("load", function() {
+    var hash = window.location.hash.substring(1); // 获取 URL 中的锚点
+
+    // 如果有 hash，展示对应内容
+    if (hash) {
+        const button = document.querySelector('button[onclick="updateUrl(\'' + hash + '\', this);"]');
+        if (button) {
+            toggleSection(hash, button);
         }
+    } else {
+        // 如果没有 hash，查找当前已经激活的按钮并显示对应内容
+        const activeButton = document.querySelector('.section-button.active');
+        if (activeButton) {
+            const activeSectionId = activeButton.textContent || activeButton.innerText;
+            toggleSection(activeSectionId, activeButton);
+        }
+    }
+});
+
+// 切换内容显示
+function toggleSection(id, button) {
+    // 隐藏所有内容
+    document.querySelectorAll('.section-content').forEach(function(section) {
+        section.classList.remove('active');
     });
 
-    // 切换内容显示
-    function toggleSection(id, button) {
-        // 隐藏所有内容
-        document.querySelectorAll('.section-content').forEach(function(section) {
-            section.classList.remove('active');
-        });
-
-        // 激活对应的内容
-        document.getElementById(id).classList.add('active');
-
-        // 去掉所有按钮的激活状态
-        document.querySelectorAll('.section-button').forEach(function(btn) {
-            btn.classList.remove('active');
-        });
-
-        // 激活当前点击的按钮
-        button.classList.add('active');
+    // 激活对应的内容
+    const section = document.getElementById(id);
+    if (section) {
+        section.classList.add('active');
     }
+
+    // 去掉所有按钮的激活状态
+    document.querySelectorAll('.section-button').forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+
+    // 激活当前点击的按钮
+    button.classList.add('active');
+}
+
+
+
+
+
+
 </script>
 
 
