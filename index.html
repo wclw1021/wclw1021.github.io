@@ -299,15 +299,11 @@ related to campus matters. </p>
 		<!-- Scripts -->
 <script>
 // 更新 URL 并保持页面不刷新
-// 更新 URL 并保持页面不刷新
 function updateUrl(id, button) {
-    const currentUrl = window.location.href;
-    const buttonName = button.textContent || button.innerText;
+    const currentUrl = window.location.href.split('#')[0]; // 获取当前 URL 去掉 hash 部分
+    const newUrl = currentUrl + '#' + id; // 使用 id 作为 hash 后缀
 
-    // 构建新的 URL 后缀
-    const newUrl = currentUrl.split('#')[0] + '#' + buttonName;
-
-    // 使用 pushState 添加新的历史记录项，保持页面不刷新
+    // 使用 pushState 更新历史记录，不刷新页面
     history.pushState(null, null, newUrl);
 
     // 切换到对应的内容
@@ -316,20 +312,20 @@ function updateUrl(id, button) {
 
 // 页面加载时根据 URL 锚点显示对应内容
 window.addEventListener("load", function() {
-    var hash = window.location.hash.substring(1); // 获取 URL 中的锚点
+    // 获取当前 URL 的 hash 部分（去掉 "#"）
+    var hash = window.location.hash.substring(1); 
 
-    // 如果有 hash，展示对应内容
+    // 如果 hash 存在，则展示对应的内容
     if (hash) {
         const button = document.querySelector('button[onclick="updateUrl(\'' + hash + '\', this);"]');
         if (button) {
             toggleSection(hash, button);
         }
     } else {
-        // 如果没有 hash，查找当前已经激活的按钮并显示对应内容
-        const activeButton = document.querySelector('.section-button.active');
-        if (activeButton) {
-            const activeSectionId = activeButton.textContent || activeButton.innerText;
-            toggleSection(activeSectionId, activeButton);
+        // 如果没有 hash，则默认显示 'Home' 部分
+        const defaultButton = document.querySelector('button.active');
+        if (defaultButton) {
+            toggleSection('one', defaultButton); // 默认展示 Home 部分
         }
     }
 });
@@ -356,12 +352,18 @@ function toggleSection(id, button) {
     button.classList.add('active');
 }
 
-
-
-
-
-
+// 监听浏览器历史记录变化，以确保返回时正确显示对应的内容
+window.addEventListener("popstate", function() {
+    var hash = window.location.hash.substring(1); // 获取 URL 中的 hash 部分
+    if (hash) {
+        const button = document.querySelector('button[onclick="updateUrl(\'' + hash + '\', this);"]');
+        if (button) {
+            toggleSection(hash, button);
+        }
+    }
+});
 </script>
+
 
 
 	</body>
