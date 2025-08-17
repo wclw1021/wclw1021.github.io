@@ -1,32 +1,35 @@
-name: Build and Deploy Jekyll with Scholar
+name: Build and Deploy Jekyll
 
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
 
-      - name: Install dependencies
+      - name: Clean previous bundle
         run: |
-          gem install bundler
-          bundle install
+          rm -rf vendor/bundle
+          rm -rf .bundle
+
+      - name: Install dependencies
+        run: bundle install --path vendor/bundle --force
+
+      - name: Check installed gems
+        run: gem list
 
       - name: Build Jekyll site
         run: bundle exec jekyll build --trace
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
