@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: publications
 description: 
-years: [Computer Graphics]
+years: [2025]
 nav: true
 ---
 
