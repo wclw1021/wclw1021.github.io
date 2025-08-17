@@ -3,34 +3,31 @@ name: Build and Deploy Jekyll site
 on:
   push:
     branches:
-      - main  # 每次 main 分支有更新时触发
-  workflow_dispatch:  # 手动触发
+      - main
 
 jobs:
-  build-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2  # 或你项目所需版本
-          bundler-cache: true
+          ruby-version: 3.1
+
+      - name: Clean previous build
+        run: |
+          rm -rf vendor/bundle .bundle _site
 
       - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
+        run: bundle install --path vendor/bundle --force
 
-      - name: Build site with Jekyll
-        run: bundle exec jekyll build
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --config _config.yml --destination ./_site --trace
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # 核心权限
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          keep_files: true  # 可选，保留旧文件
