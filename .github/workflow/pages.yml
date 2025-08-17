@@ -1,4 +1,4 @@
-name: Build and Deploy Jekyll
+name: Build and Deploy Jekyll site
 
 on:
   push:
@@ -6,8 +6,9 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -15,21 +16,18 @@ jobs:
         with:
           ruby-version: 3.1
 
-      - name: Clean previous bundle
+      - name: Clean previous build
         run: |
-          rm -rf vendor/bundle
-          rm -rf .bundle
+          rm -rf vendor/bundle .bundle _site
 
       - name: Install dependencies
         run: bundle install --path vendor/bundle --force
 
-      - name: Check installed gems
-        run: gem list
-
       - name: Build Jekyll site
-        run: bundle exec jekyll build --trace
+        run: bundle exec jekyll build --config _config.yml --destination ./_site --trace
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
