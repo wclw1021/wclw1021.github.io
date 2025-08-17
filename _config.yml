@@ -108,7 +108,7 @@ plugins:
   - jekyll-email-protect
   - jekyll-github-metadata
   - jekyll-paginate-v2
-  - jekyll/scholar
+  - jekyll-scholar
   - jekyll-twitter-plugin
   - jemoji
   # - bootstrap
@@ -118,25 +118,25 @@ plugins:
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
-# scholar:
+scholar:
 
-#   last_name: Wang
+  last_name: Wang
 
-#   style: acm-siggraph
-#   locale: en
+  style: acm-siggraph
+  locale: en
 
-#   source: /_bibliography/
-#   bibliography: papers.bib
-#   bibliography_template: bib
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
 
-#   replace_strings: true
-#   join_strings: true
+  replace_strings: true
+  join_strings: true
 
-#   details_dir: bibliography
-#   details_layout: bibtex.html
-#   details_link: Details
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
 
-#   query: "@*"
+  query: "@*"
 
 # -----------------------------------------------------------------------------
 # Optional Features
