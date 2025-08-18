@@ -1,7 +1,7 @@
 ---
 layout: courses
 permalink: /teaching/
-title: teaching
+title: Teaching
 description: 
 years: []
 nav: true
