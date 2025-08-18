@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: about
 permalink: /
 description: Ph.D. in Computer Science<br><a href="https://www.cs.ubc.ca/">Department of Computer Science</a><br><a href="https://www.ubc.ca/">University of British Columbia</a> 
 
