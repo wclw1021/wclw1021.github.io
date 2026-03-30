@@ -14,6 +14,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 ---
 <p style="color:red;">Welcome to you, and also welcome to me!</p>
 
-I'm a first-year CS Ph.D. student at the University of British Columbia, advised by <a href="https://peterchencyc.com/">Prof. Peter Yichen Chen</a>. Currently, my research focuses on computer graphics and how to apply computer graphics and machine learning techniques to scientific discovery.
+I'm a first-year CS Ph.D. student at the University of British Columbia, advised by <a href="https://peterchencyc.com/">Prof. Peter Yichen Chen</a>. Currently, My research interests lie at the intersection of computer vision and computer graphics, with a specific focus on integrating PDE-based methods with AI-driven physical simulations.
 
 I received my B.S. in Computation Mathematics from <a href="http://gcl.ustc.edu.cn/">Graphics & Geometric Computing Lab</a> at <a href="http://gcl.ustc.edu.cn/">University of Science and Technology of China (USTC)</a>, where I was very fortunate to be advised by <a href="http://staff.ustc.edu.cn/~lgliu/">Prof. Ligang Liu</a> and <a href="http://staff.ustc.edu.cn/~juyong/">Prof. Juyong Zhang</a>. I also worked with <a href="http://staff.ustc.edu.cn/~renjiec/">Prof. Renjie Chen</a>, <a href="https://qingfang1208.github.io/">Prof. Qing Fang</a> at USTC and <a href="http://www.bdeng.me/">Prof. Bailin Deng</a> in <a href="https://www.cardiff.ac.uk/computer-science">the School of Computer Science and Informatics</a> at <a href="https://www.cardiff.ac.uk/">Cardiff University</a>.
