@@ -27,7 +27,7 @@ layout: default
       {{ content }}
     </div>
 
-    {% if site.data.news %}
+    {% if page.news != false and site.data.news %}
       {% include news.html %}
     {% endif %}
 
