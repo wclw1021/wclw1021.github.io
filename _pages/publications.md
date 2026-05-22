@@ -4,7 +4,7 @@ permalink: /publications/
 title: Publications
 description: 
 years: [2026, 2025]
-nav: true
+nav: false
 ---
 
 <div class="publications">
