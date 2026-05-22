@@ -4,5 +4,5 @@ permalink: /teaching/
 title: Teaching
 description: 
 years: []
-nav: true
+nav: false
 ---
