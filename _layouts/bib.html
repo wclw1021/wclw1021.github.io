@@ -42,29 +42,34 @@
       {% endif %}
       <div class="author">
         {% for author in entry.author_array %}
+          {% assign clean_first = author.first | split: '<sup>' | first | strip %}
+          {% assign clean_last = author.last | split: '<sup>' | first | strip %}
+          {% assign author_name = clean_first | append: ' ' | append: clean_last | strip %}
           {% if forloop.length == 1 %}
-            {% if author.last == site.scholar.last_name %}
+            {% if clean_last == site.scholar.last_name %}
               <em>{{author.first}} {{author.last}}</em>
+            {% elsif site.data.coauthors[author_name] %}
+              <a href="{{site.data.coauthors[author_name].url}}" target="_blank" rel="noopener noreferrer">{{author.first}} {{author.last}}</a>
             {% else %}
               {{author.first}} {{author.last}}
             {% endif %}
           {% else %}
             {% unless forloop.last %}
-              {% if author.last == site.scholar.last_name %}
+              {% if clean_last == site.scholar.last_name %}
                 <em>{{author.first}} {{author.last}}</em>,
               {% else %}
-                {% if site.data.coauthors[author.last] %}
-                  <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>,
+                {% if site.data.coauthors[author_name] %}
+                  <a href="{{site.data.coauthors[author_name].url}}" target="_blank" rel="noopener noreferrer">{{author.first}} {{author.last}}</a>,
                 {% else %}
                   {{author.first}} {{author.last}},
                 {% endif %}
               {% endif %}
             {% else %}
-              {% if author.last == site.scholar.last_name %}
+              {% if clean_last == site.scholar.last_name %}
                 <em>{{author.first}} {{author.last}}</em>
               {% else %}
-                {% if site.data.coauthors[author.last] %}
-                  <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>
+                {% if site.data.coauthors[author_name] %}
+                  <a href="{{site.data.coauthors[author_name].url}}" target="_blank" rel="noopener noreferrer">{{author.first}} {{author.last}}</a>
                 {% else %}
                   {{author.first}} {{author.last}}
                 {% endif %}

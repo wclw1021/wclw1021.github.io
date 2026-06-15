@@ -379,8 +379,10 @@ ul.list-inline {
       }
       .author {
         a {
+          color: inherit;
           border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
+              color: inherit;
               border-bottom-style: solid;
               text-decoration: none;
           }
