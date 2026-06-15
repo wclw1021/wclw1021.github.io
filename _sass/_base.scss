@@ -379,11 +379,12 @@ ul.list-inline {
       }
       .author {
         a {
-          color: inherit;
-          border-bottom: 1px dashed var(--global-theme-color);
+          color: inherit !important;
+          border-bottom: none;
+          text-decoration: none;
           &:hover {
-              color: inherit;
-              border-bottom-style: solid;
+              color: inherit !important;
+              border-bottom: none;
               text-decoration: none;
           }
         }
