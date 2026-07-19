@@ -41,12 +41,20 @@
             <div class="title"><a href="{{entry.pdf}}">{{entry.title}}</a></div>
       {% endif %}
       <div class="author">
+        {% assign site_first = site.first_name | strip %}
+        {% assign site_middle = site.middle_name | strip %}
+        {% assign site_last = site.last_name | strip %}
+        {% if site_middle == '' %}
+          {% assign site_author_name = site_first | append: ' ' | append: site_last | strip %}
+        {% else %}
+          {% assign site_author_name = site_first | append: ' ' | append: site_middle | append: ' ' | append: site_last | strip %}
+        {% endif %}
         {% for author in entry.author_array %}
           {% assign clean_first = author.first | split: '<sup>' | first | strip %}
           {% assign clean_last = author.last | split: '<sup>' | first | strip %}
           {% assign author_name = clean_first | append: ' ' | append: clean_last | strip %}
           {% if forloop.length == 1 %}
-            {% if clean_last == site.scholar.last_name %}
+            {% if author_name == site_author_name %}
               <em>{{author.first}} {{author.last}}</em>
             {% elsif site.data.coauthors[author_name] %}
               <a href="{{site.data.coauthors[author_name].url}}" target="_blank" rel="noopener noreferrer">{{author.first}} {{author.last}}</a>
@@ -55,7 +63,7 @@
             {% endif %}
           {% else %}
             {% unless forloop.last %}
-              {% if clean_last == site.scholar.last_name %}
+              {% if author_name == site_author_name %}
                 <em>{{author.first}} {{author.last}}</em>,
               {% else %}
                 {% if site.data.coauthors[author_name] %}
@@ -65,7 +73,7 @@
                 {% endif %}
               {% endif %}
             {% else %}
-              {% if clean_last == site.scholar.last_name %}
+              {% if author_name == site_author_name %}
                 <em>{{author.first}} {{author.last}}</em>
               {% else %}
                 {% if site.data.coauthors[author_name] %}
