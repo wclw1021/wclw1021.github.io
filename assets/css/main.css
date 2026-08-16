@@ -42,6 +42,10 @@ a:hover:after, table.table a:hover:after { width: 100%; }
 
 .profile .address p { display: inline-block; margin: 0; }
 
+.about-introduction { --about-letter-spacing: 0.01em; }
+
+.about-introduction p { text-align: justify; text-justify: inter-word; letter-spacing: var(--about-letter-spacing); hyphens: auto; }
+
 @media (min-width: 576px) { .profile { width: 30%; } .profile .address p { display: block; } }
 
 .post-description { margin-bottom: 2rem; font-size: 0.875rem; }
